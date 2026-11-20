@@ -1,0 +1,14 @@
+{
+  "MI_Ball": {
+    "color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "metallic": 0.0,
+    "roughness": 0.65,
+    "shader": "opaque",
+    "specular": 0.45,
+    "texture": "T_Ball"
+  }
+}

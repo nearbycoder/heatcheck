@@ -1,0 +1,1335 @@
+{
+  "note": "Blender meters (x right, y away from the game camera, z up). Unreal cm = (100x, -100y, 100z). All arena meshes use the world origin as pivot: place every mesh listed in static_meshes_at_origin at (0,0,0) with no rotation.",
+  "static_meshes_at_origin": [
+    "SM_ArenaBowl",
+    "SM_Banners",
+    "SM_Crowd_LowerFar",
+    "SM_Crowd_LowerLeft",
+    "SM_Crowd_LowerNear",
+    "SM_Crowd_LowerRight",
+    "SM_Crowd_UpperFar",
+    "SM_Crowd_UpperLeft",
+    "SM_Crowd_UpperNear",
+    "SM_Crowd_UpperRight",
+    "SM_Jumbotron",
+    "SM_LedRibbon_Courtside",
+    "SM_LedRibbon_Facade",
+    "SM_LightRig",
+    "SM_ScorerTable",
+    "SM_TeamBenches"
+  ],
+  "meshes": {
+    "SM_ArenaBowl": {
+      "tris": 141184,
+      "materials": [
+        "MI_BowlConcrete",
+        "MI_BowlWall",
+        "MI_AisleStep",
+        "MI_ArenaShell",
+        "MI_RoofSteel",
+        "MI_ConcourseGlow",
+        "MI_SeatRed",
+        "MI_SeatDark"
+      ]
+    },
+    "SM_Banners": {
+      "tris": 224,
+      "materials": [
+        "MI_Banner",
+        "MI_Cable"
+      ]
+    },
+    "SM_Crowd_LowerFar": {
+      "tris": 53362,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_LowerLeft": {
+      "tris": 39160,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_LowerNear": {
+      "tris": 51636,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_LowerRight": {
+      "tris": 39634,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_UpperFar": {
+      "tris": 66492,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_UpperLeft": {
+      "tris": 49280,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_UpperNear": {
+      "tris": 66560,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Crowd_UpperRight": {
+      "tris": 48612,
+      "materials": [
+        "MI_Crowd"
+      ]
+    },
+    "SM_Jumbotron": {
+      "tris": 108,
+      "materials": [
+        "MI_JumboBody",
+        "MI_JumboScreen",
+        "MI_JumboRing",
+        "MI_Cable"
+      ]
+    },
+    "SM_LedRibbon_Courtside": {
+      "tris": 102,
+      "materials": [
+        "MI_LedRibbon"
+      ]
+    },
+    "SM_LedRibbon_Facade": {
+      "tris": 202,
+      "materials": [
+        "MI_LedFacade"
+      ]
+    },
+    "SM_LightRig": {
+      "tris": 7624,
+      "materials": [
+        "MI_Truss",
+        "MI_LightHousing",
+        "MI_LightPanel",
+        "MI_Cable"
+      ]
+    },
+    "SM_ScorerTable": {
+      "tris": 620,
+      "materials": [
+        "MI_ScorerTable",
+        "MI_ScorerTop",
+        "MI_ScorerLed",
+        "MI_Monitor",
+        "MI_BenchChair",
+        "MI_BenchFrame"
+      ]
+    },
+    "SM_TeamBenches": {
+      "tris": 3516,
+      "materials": [
+        "MI_BenchChair",
+        "MI_BenchFrame",
+        "MI_Cooler"
+      ]
+    }
+  },
+  "total_tris": 568316,
+  "bowl": {
+    "front_wall": {
+      "x": [
+        -19.3,
+        19.3
+      ],
+      "y_far": 12.6,
+      "y_near": -14.6,
+      "corner_radius": 6.0,
+      "height": 1.1
+    },
+    "lower_rows": 12,
+    "upper_rows": 10,
+    "row_depth": 0.85,
+    "lower_rise": 0.4,
+    "upper_rise": 0.55,
+    "facade": {
+      "offset": 10.6,
+      "z": [
+        8.2,
+        10.4
+      ]
+    },
+    "outer_wall_offset": 19.4,
+    "roof_z": 26.0
+  },
+  "crowd": {
+    "seats": 6354,
+    "fans": 5754,
+    "sections": {
+      "LowerFar": 743,
+      "LowerLeft": 551,
+      "LowerNear": 723,
+      "LowerRight": 549,
+      "UpperFar": 917,
+      "UpperLeft": 678,
+      "UpperNear": 916,
+      "UpperRight": 677
+    },
+    "poses": {
+      "seated": 3849,
+      "standing": 718,
+      "clap": 557,
+      "armsup": 403,
+      "pump": 227
+    },
+    "material": "MI_Crowd",
+    "uv0": "x = per-fan phase 0..1, y = per-fan bounce amplitude 0..1 (Blender UV convention; Unreal's FBX import flips V, so in UE amplitude = 1 - TexCoord0.y)",
+    "vertex_colors": "linear RGB per face corner (shirt/skin/hair/pants/props)"
+  },
+  "led_ribbons": {
+    "SM_LedRibbon_Courtside": {
+      "length_m": 74.866,
+      "repeat_m": 7.2,
+      "z": [
+        0.12,
+        1.02
+      ],
+      "offset_from_front_wall_m": -0.312
+    },
+    "SM_LedRibbon_Facade": {
+      "length_m": 187.807,
+      "repeat_m": 9.39,
+      "z": [
+        8.65,
+        9.85
+      ],
+      "closed_loop": true
+    }
+  },
+  "scorer_table": {
+    "front_panel": {
+      "center": [
+        0.0,
+        9.044,
+        0.385
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "size_m": [
+        7.0,
+        0.63
+      ]
+    }
+  },
+  "jumbotron": {
+    "center": [
+      0.0,
+      0.0,
+      15.5
+    ],
+    "body_size_m": [
+      6.4,
+      4.4,
+      3.4
+    ],
+    "screens": [
+      {
+        "name": "south_minusY",
+        "center": [
+          0.0,
+          -2.212,
+          15.5
+        ],
+        "normal": [
+          0,
+          -1,
+          0
+        ],
+        "right": [
+          1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "size_m": [
+          6.0,
+          3.0
+        ],
+        "uv_rect": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "ue_center_cm": [
+          0.0,
+          221.2,
+          1550.0
+        ]
+      },
+      {
+        "name": "north_plusY",
+        "center": [
+          0.0,
+          2.212,
+          15.5
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "right": [
+          -1,
+          0,
+          0
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "size_m": [
+          6.0,
+          3.0
+        ],
+        "uv_rect": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "ue_center_cm": [
+          0.0,
+          -221.2,
+          1550.0
+        ]
+      },
+      {
+        "name": "east_plusX",
+        "center": [
+          3.212,
+          0.0,
+          15.5
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "right": [
+          0,
+          1,
+          0
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "size_m": [
+          4.0,
+          3.0
+        ],
+        "uv_rect": [
+          0.16666666666666669,
+          0.0,
+          0.8333333333333333,
+          1.0
+        ],
+        "ue_center_cm": [
+          321.2,
+          -0.0,
+          1550.0
+        ]
+      },
+      {
+        "name": "west_minusX",
+        "center": [
+          -3.212,
+          0.0,
+          15.5
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "right": [
+          0,
+          -1,
+          0
+        ],
+        "up": [
+          0,
+          0,
+          1
+        ],
+        "size_m": [
+          4.0,
+          3.0
+        ],
+        "uv_rect": [
+          0.16666666666666669,
+          0.0,
+          0.8333333333333333,
+          1.0
+        ],
+        "ue_center_cm": [
+          -321.2,
+          -0.0,
+          1550.0
+        ]
+      }
+    ]
+  },
+  "light_rig": {
+    "truss_z": [
+      21.0,
+      21.6
+    ],
+    "panels": [
+      {
+        "center": [
+          -15.75,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1575.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -11.25,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1125.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -6.75,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -675.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -2.25,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -225.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          2.25,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          225.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          6.75,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          675.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          11.25,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1125.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          15.75,
+          -9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1575.0,
+          900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -15.75,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1575.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -11.25,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1125.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -6.75,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -675.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -2.25,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -225.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          2.25,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          225.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          6.75,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          675.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          11.25,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1125.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          15.75,
+          -3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1575.0,
+          300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -15.75,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1575.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -11.25,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1125.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -6.75,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -675.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -2.25,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -225.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          2.25,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          225.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          6.75,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          675.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          11.25,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1125.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          15.75,
+          3.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1575.0,
+          -300.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -15.75,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1575.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -11.25,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -1125.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -6.75,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -675.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          -2.25,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          -225.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          2.25,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          225.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          6.75,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          675.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          11.25,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1125.0,
+          -900.0,
+          2055.0
+        ]
+      },
+      {
+        "center": [
+          15.75,
+          9.0,
+          20.55
+        ],
+        "normal": [
+          0.0,
+          -0.4226,
+          -0.9063
+        ],
+        "size_m": [
+          1.2,
+          0.7
+        ],
+        "ue_center_cm": [
+          1575.0,
+          -900.0,
+          2055.0
+        ]
+      }
+    ],
+    "suggested_spotlights": [
+      {
+        "position": [
+          -18,
+          -9,
+          20.8
+        ],
+        "target": [
+          -8.1,
+          -1.8,
+          0.0
+        ]
+      },
+      {
+        "position": [
+          18,
+          -9,
+          20.8
+        ],
+        "target": [
+          8.1,
+          -1.8,
+          0.0
+        ]
+      },
+      {
+        "position": [
+          -18,
+          9,
+          20.8
+        ],
+        "target": [
+          -8.1,
+          1.8,
+          0.0
+        ]
+      },
+      {
+        "position": [
+          18,
+          9,
+          20.8
+        ],
+        "target": [
+          8.1,
+          1.8,
+          0.0
+        ]
+      },
+      {
+        "position": [
+          0,
+          -9,
+          20.8
+        ],
+        "target": [
+          0.0,
+          -1.8,
+          0.0
+        ]
+      },
+      {
+        "position": [
+          0,
+          9,
+          20.8
+        ],
+        "target": [
+          0.0,
+          1.8,
+          0.0
+        ]
+      }
+    ]
+  },
+  "banners": [
+    {
+      "center": [
+        -11.55,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        -8.25,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        -4.95,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        -1.65,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        1.65,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        4.95,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        8.25,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "center": [
+        11.55,
+        31.0,
+        21.0
+      ],
+      "size_m": [
+        2.2,
+        8.8
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "camera_clear_zone": {
+    "y": [
+      -14.0,
+      -7.62
+    ],
+    "max_height_m": 1.2,
+    "violations": 0
+  },
+  "environment_placement": {
+    "at_origin": [
+      "SM_CourtFloor",
+      "SM_ArenaFloor",
+      "SM_ArenaBowl",
+      "SM_Banners",
+      "SM_Crowd_LowerFar",
+      "SM_Crowd_LowerLeft",
+      "SM_Crowd_LowerNear",
+      "SM_Crowd_LowerRight",
+      "SM_Crowd_UpperFar",
+      "SM_Crowd_UpperLeft",
+      "SM_Crowd_UpperNear",
+      "SM_Crowd_UpperRight",
+      "SM_Jumbotron",
+      "SM_LedRibbon_Courtside",
+      "SM_LedRibbon_Facade",
+      "SM_LightRig",
+      "SM_ScorerTable",
+      "SM_TeamBenches"
+    ],
+    "hoops": {
+      "note": "hoop-local meshes; see Manifests/hoop.json for part offsets",
+      "instances": [
+        {
+          "location_cm": [
+            -1272.5,
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 0.0
+        },
+        {
+          "location_cm": [
+            1272.5,
+            0.0,
+            0.0
+          ],
+          "yaw_deg": 180.0
+        }
+      ]
+    },
+    "ball": {
+      "mesh": "SM_Ball",
+      "pivot": "ball centre",
+      "radius_m": 0.12
+    }
+  }
+}

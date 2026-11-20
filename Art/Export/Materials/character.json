@@ -1,0 +1,152 @@
+{
+  "MI_PlayerSkin": {
+    "shader": "character",
+    "color": [
+      0.2664,
+      0.0908,
+      0.0176
+    ],
+    "roughness": 0.55,
+    "metallic": 0.0
+  },
+  "MI_PlayerJersey": {
+    "shader": "character",
+    "color": [
+      1.0,
+      0.6724,
+      0.003
+    ],
+    "roughness": 0.72,
+    "metallic": 0.0
+  },
+  "MI_PlayerJerseyTrim": {
+    "shader": "character",
+    "color": [
+      0.0056,
+      0.0056,
+      0.0056
+    ],
+    "roughness": 0.72,
+    "metallic": 0.0
+  },
+  "MI_PlayerShorts": {
+    "shader": "character",
+    "color": [
+      1.0,
+      0.6724,
+      0.003
+    ],
+    "roughness": 0.72,
+    "metallic": 0.0
+  },
+  "MI_PlayerShortsTrim": {
+    "shader": "character",
+    "color": [
+      0.0056,
+      0.0056,
+      0.0056
+    ],
+    "roughness": 0.72,
+    "metallic": 0.0
+  },
+  "MI_PlayerSocks": {
+    "shader": "character",
+    "color": [
+      0.92,
+      0.92,
+      0.92
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "MI_PlayerShoe": {
+    "shader": "character",
+    "color": [
+      0.008,
+      0.008,
+      0.0103
+    ],
+    "roughness": 0.4,
+    "metallic": 0.0
+  },
+  "MI_PlayerShoeSole": {
+    "shader": "character",
+    "color": [
+      0.93,
+      0.93,
+      0.93
+    ],
+    "roughness": 0.55,
+    "metallic": 0.0
+  },
+  "MI_PlayerShoeAccent": {
+    "shader": "character",
+    "color": [
+      1.0,
+      0.6724,
+      0.003
+    ],
+    "roughness": 0.4,
+    "metallic": 0.0
+  },
+  "MI_PlayerEyes": {
+    "shader": "character",
+    "color": [
+      0.95,
+      0.95,
+      0.95
+    ],
+    "roughness": 0.25,
+    "metallic": 0.0
+  },
+  "MI_PlayerFaceDark": {
+    "shader": "character",
+    "color": [
+      0.02,
+      0.015,
+      0.012
+    ],
+    "roughness": 0.45,
+    "metallic": 0.0
+  },
+  "MI_PlayerHair": {
+    "shader": "character",
+    "color": [
+      0.018,
+      0.012,
+      0.008
+    ],
+    "roughness": 0.9,
+    "metallic": 0.0
+  },
+  "MI_PlayerAccessory": {
+    "shader": "character",
+    "color": [
+      0.95,
+      0.95,
+      0.95
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "MI_PlayerNumber": {
+    "shader": "character",
+    "color": [
+      0.03,
+      0.03,
+      0.03
+    ],
+    "roughness": 0.65,
+    "metallic": 0.0
+  },
+  "MI_PlayerJerseyText": {
+    "shader": "character",
+    "color": [
+      0.03,
+      0.03,
+      0.03
+    ],
+    "roughness": 0.65,
+    "metallic": 0.0
+  }
+}

@@ -1,0 +1,1783 @@
+{
+ "generated_by": "Tools/web/build_web_assets.sh",
+ "conventions": {
+  "axes": "glTF 2.0, +Y up, metres. Blender (x, y, z) -> glTF (x, z, -y). Court length along X; the game camera's near sideline is glTF +Z (Blender -Y), the far sideline glTF -Z.",
+  "materials": "material names are the MI_* names from Art/Export/Materials/*.json; extras.shader holds the source shader type (opaque, character, emissive, glass, masked, crowd) and extras.pan_u (UV units/s) is set on scrolling LED materials.",
+  "emissive": "emissive materials have black base colour, emissiveFactor = colour, emissiveTexture = texture and KHR_materials_emissive_strength = emissive_strength * 0.35 (the same factor Unreal uses). extras.emissive_strength_authored keeps the raw value.",
+  "colour_space": "base colours are linear (as authored). Textures are sRGB JPEG/PNG embedded in the GLBs."
+ },
+ "compression": {
+  "geometry": "EXT_meshopt_compression + KHR_mesh_quantization on characters/player.glb, characters/referee.glb, arena/arena.glb and arena/arena_lite.glb (POSITION stays float32; normals/uv/colour/weights are quantized). court/hoop/ball are uncompressed.",
+  "three_js": "loader.setMeshoptDecoder(MeshoptDecoder) with import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js'. No Draco, no KTX2.",
+  "extensions_used": [
+   "EXT_meshopt_compression",
+   "KHR_materials_emissive_strength",
+   "KHR_mesh_quantization"
+  ]
+ },
+ "characters": {
+  "player": {
+   "file": "characters/player.glb",
+   "bytes": 3129472,
+   "compression": "EXT_meshopt_compression+KHR_mesh_quantization",
+   "tris_total": 194918,
+   "meshes": {
+    "SK_Beard_Full": {
+     "tris": 4240,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Beard_Goatee": {
+     "tris": 1304,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Afro": {
+     "tris": 4998,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Braids": {
+     "tris": 9164,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Bun": {
+     "tris": 4604,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Buzz": {
+     "tris": 4164,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Curls": {
+     "tris": 4500,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Flattop": {
+     "tris": 4960,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Hair_Mohawk": {
+     "tris": 7164,
+     "materials": [
+      "MI_PlayerHair"
+     ]
+    },
+    "SK_Headband": {
+     "tris": 384,
+     "materials": [
+      "MI_PlayerAccessory"
+     ]
+    },
+    "SK_JerseyText_BAY": {
+     "tris": 2412,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_JerseyText_FRB": {
+     "tris": 1616,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_JerseyText_NEO": {
+     "tris": 2512,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_JerseyText_RRK": {
+     "tris": 7560,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_JerseyText_SSC": {
+     "tris": 3764,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_JerseyText_STV": {
+     "tris": 2960,
+     "materials": [
+      "MI_PlayerJerseyText"
+     ]
+    },
+    "SK_Num_C0": {
+     "tris": 2336,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C1": {
+     "tris": 48,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C2": {
+     "tris": 1984,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C3": {
+     "tris": 3904,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C4": {
+     "tris": 112,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C5": {
+     "tris": 2192,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C6": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C7": {
+     "tris": 64,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C8": {
+     "tris": 5416,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_C9": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O0": {
+     "tris": 2336,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O1": {
+     "tris": 48,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O2": {
+     "tris": 1984,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O3": {
+     "tris": 3904,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O4": {
+     "tris": 112,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O5": {
+     "tris": 2192,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O6": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O7": {
+     "tris": 64,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O8": {
+     "tris": 5416,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_O9": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T0": {
+     "tris": 2336,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T1": {
+     "tris": 48,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T2": {
+     "tris": 1984,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T3": {
+     "tris": 3904,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T4": {
+     "tris": 112,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T5": {
+     "tris": 2192,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T6": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T7": {
+     "tris": 64,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T8": {
+     "tris": 5416,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Num_T9": {
+     "tris": 3120,
+     "materials": [
+      "MI_PlayerNumber"
+     ]
+    },
+    "SK_Player": {
+     "tris": 61156,
+     "materials": [
+      "MI_PlayerSkin",
+      "MI_PlayerJersey",
+      "MI_PlayerJerseyTrim",
+      "MI_PlayerShorts",
+      "MI_PlayerShortsTrim",
+      "MI_PlayerSocks",
+      "MI_PlayerEyes",
+      "MI_PlayerFaceDark",
+      "MI_PlayerShoe",
+      "MI_PlayerShoeAccent",
+      "MI_PlayerShoeSole"
+     ]
+    },
+    "SK_Wristbands": {
+     "tris": 568,
+     "materials": [
+      "MI_PlayerAccessory"
+     ]
+    }
+   },
+   "materials": [
+    "MI_PlayerAccessory",
+    "MI_PlayerEyes",
+    "MI_PlayerFaceDark",
+    "MI_PlayerHair",
+    "MI_PlayerJersey",
+    "MI_PlayerJerseyText",
+    "MI_PlayerJerseyTrim",
+    "MI_PlayerNumber",
+    "MI_PlayerShoe",
+    "MI_PlayerShoeAccent",
+    "MI_PlayerShoeSole",
+    "MI_PlayerShorts",
+    "MI_PlayerShortsTrim",
+    "MI_PlayerSkin",
+    "MI_PlayerSocks"
+   ],
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "neck",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "grip_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "grip_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+   ],
+   "skeleton_root": "root (child of the 'Armature' node); every bone has scale 1, metres",
+   "animations": {
+    "Backpedal": {
+     "duration_s": 0.533333,
+     "frames": 16,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.07,
+      0.036,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Block": {
+     "duration_s": 0.866667,
+     "frames": 26,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "apex_frame": 9
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.22,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Celebrate": {
+     "duration_s": 1.066667,
+     "frames": 32,
+     "fps": 30,
+     "loop": false,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.04,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Defense": {
+     "duration_s": 0.8,
+     "frames": 24,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.036,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "DribbleIdle": {
+     "duration_s": 0.533333,
+     "frames": 16,
+     "fps": 30,
+     "loop": true,
+     "events": {
+      "ball_contact": 0,
+      "ball_floor": 7
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.024,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Dunk": {
+     "duration_s": 1.333333,
+     "frames": 40,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "air_frame": 12,
+      "slam_frame": 24,
+      "hang_frame": 28
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.28,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "DunkWindmill": {
+     "duration_s": 1.333333,
+     "frames": 40,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "air_frame": 10,
+      "slam_frame": 24,
+      "hang_frame": 28
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.28,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Fall": {
+     "duration_s": 0.866667,
+     "frames": 26,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "ground_frame": 11
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.78,
+      0.4
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      -0.4
+     ]
+    },
+    "GetUp": {
+     "duration_s": 0.866667,
+     "frames": 26,
+     "fps": 30,
+     "loop": false,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.79,
+      0.4
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.4
+     ]
+    },
+    "HoldBall": {
+     "duration_s": 1,
+     "frames": 30,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.011,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Idle": {
+     "duration_s": 2,
+     "frames": 60,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.01,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "JumpShot": {
+     "duration_s": 1,
+     "frames": 30,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "set_frame": 13,
+      "release_frame": 16
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.19,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Land": {
+     "duration_s": 0.366667,
+     "frames": 11,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "ground_frame": 2
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.18,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Layup": {
+     "duration_s": 0.866667,
+     "frames": 26,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "release_frame": 12
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.14,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Pass": {
+     "duration_s": 0.466667,
+     "frames": 14,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "release_frame": 6
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.065,
+      0.066
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Run": {
+     "duration_s": 0.6,
+     "frames": 18,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.078,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "RunDribble": {
+     "duration_s": 0.6,
+     "frames": 18,
+     "fps": 30,
+     "loop": true,
+     "events": {
+      "ball_contact": 0,
+      "ball_floor": 8
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.068,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Shove": {
+     "duration_s": 0.6,
+     "frames": 18,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "impact_frame": 6
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.07,
+      0.1
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "ShuffleLeft": {
+     "duration_s": 0.533333,
+     "frames": 16,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.07,
+      0.036,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "ShuffleRight": {
+     "duration_s": 0.533333,
+     "frames": 16,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.07,
+      0.036,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Sprint": {
+     "duration_s": 0.533333,
+     "frames": 16,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.11,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Steal": {
+     "duration_s": 0.466667,
+     "frames": 14,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "contact_frame": 5
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.02,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "Tip": {
+     "duration_s": 0.8,
+     "frames": 24,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "reach_frame": 12
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.17,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "facing": "+Z (glTF). Blender -Y. Rotate the model so +Z points along the character's heading.",
+   "up": "+Y",
+   "feet_at_y": 0.0,
+   "standing_height_m": 2.0324,
+   "max_height_with_attachments_m": 2.1263,
+   "root_motion": "none: the 'root' bone is never keyed away from the origin in any clip (in-place). The pelvis carries the body bob/jump height; Fall ends with the pelvis 0.4 m behind the character (glTF -Z) lying down and GetUp starts there and returns to the origin.",
+   "attachments": {
+    "hair": [
+     "SK_Hair_Buzz",
+     "SK_Hair_Flattop",
+     "SK_Hair_Afro",
+     "SK_Hair_Braids",
+     "SK_Hair_Mohawk",
+     "SK_Hair_Curls",
+     "SK_Hair_Bun"
+    ],
+    "beard": [
+     "SK_Beard_Full",
+     "SK_Beard_Goatee"
+    ],
+    "accessories": [
+     "SK_Headband",
+     "SK_Wristbands"
+    ],
+    "numbers": "SK_Num_{T,O,C}{0-9}: T = tens digit (viewer-left on the front), O = ones digit, C = centred single digit; show one T+O pair or one C",
+    "jersey_text": [
+     "SK_JerseyText_NEO",
+     "SK_JerseyText_BAY",
+     "SK_JerseyText_RRK",
+     "SK_JerseyText_FRB",
+     "SK_JerseyText_STV",
+     "SK_JerseyText_SSC"
+    ],
+    "note": "all attachments are SkinnedMeshes bound to the same skeleton; show/hide by node name"
+   },
+   "head": {
+    "bone": "head",
+    "bone_head_position_m_gltf": [
+     0.0,
+     1.69,
+     0.004
+    ],
+    "bone_tail_position_m_gltf": [
+     0.0,
+     1.99,
+     0.004
+    ],
+    "head_scale_baked": 1.12,
+    "note": "head_scale (1.12) is already baked into the mesh. Big-head mode in the Unreal game sets the 'head' bone scale to 1.7 (HCGameMode ApplyHeadScale(1.7)); it scales about the bone's head joint (top of the neck). Hair, beards and the headband are rigidly weighted to 'head', so they follow."
+   },
+   "recolor": "team colours are applied at runtime by material name (MI_PlayerJersey, MI_PlayerShorts, ...). Base colours in the file are the defaults from Art/Export/Materials/character.json (linear)."
+  },
+  "referee": {
+   "file": "characters/referee.glb",
+   "bytes": 613816,
+   "compression": "EXT_meshopt_compression+KHR_mesh_quantization",
+   "tris_total": 71426,
+   "meshes": {
+    "SK_Referee": {
+     "tris": 71426,
+     "materials": [
+      "MI_PlayerSkin",
+      "MI_PlayerJerseyTrim",
+      "MI_PlayerShortsTrim",
+      "MI_PlayerSocks",
+      "MI_PlayerEyes",
+      "MI_PlayerFaceDark",
+      "MI_PlayerShoe",
+      "MI_PlayerShoeSole",
+      "MI_PlayerHair"
+     ]
+    }
+   },
+   "materials": [
+    "MI_PlayerEyes",
+    "MI_PlayerFaceDark",
+    "MI_PlayerHair",
+    "MI_PlayerJerseyTrim",
+    "MI_PlayerShoe",
+    "MI_PlayerShoeSole",
+    "MI_PlayerShortsTrim",
+    "MI_PlayerSkin",
+    "MI_PlayerSocks"
+   ],
+   "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "neck",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "grip_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "grip_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+   ],
+   "skeleton_root": "root (child of the 'Armature' node); every bone has scale 1, metres",
+   "animations": {
+    "Idle": {
+     "duration_s": 2,
+     "frames": 60,
+     "fps": 30,
+     "loop": true,
+     "events": {},
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.01,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    },
+    "RefToss": {
+     "duration_s": 1.5,
+     "frames": 45,
+     "fps": 30,
+     "loop": false,
+     "events": {
+      "release_frame": 27
+     },
+     "pelvis_range_m_gltf_xyz": [
+      0.0,
+      0.155,
+      0.0
+     ],
+     "pelvis_net_displacement_m_gltf_xz": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "facing": "+Z (glTF). Blender -Y. Rotate the model so +Z points along the character's heading.",
+   "up": "+Y",
+   "feet_at_y": 0.0,
+   "standing_height_m": 2.0363,
+   "max_height_with_attachments_m": 2.0363,
+   "root_motion": "none: the 'root' bone is never keyed away from the origin in any clip (in-place). The pelvis carries the body bob/jump height; Fall ends with the pelvis 0.4 m behind the character (glTF -Z) lying down and GetUp starts there and returns to the origin.",
+   "note": "Same 25-bone skeleton as the player. Uses MI_Player* material names with the default colours; stripes are MI_PlayerSocks (white) / MI_PlayerJerseyTrim (black). Do not team-recolour it. There is no referee idle in referee.blend; 'Idle' is the player's idle clip."
+  }
+ },
+ "arena": {
+  "court": {
+   "file": "arena/court.glb",
+   "bytes": 1856720,
+   "tris": 384,
+   "meshes": [
+    "SM_ArenaFloor",
+    "SM_CourtFloor"
+   ],
+   "texture": "T_Court 4096x2048 JPEG (embedded)",
+   "dimensions": {
+    "boundary_outer_x": [
+     -14.325,
+     14.325
+    ],
+    "boundary_outer_y": [
+     -7.62,
+     7.62
+    ],
+    "line_width": 0.05,
+    "rim_floor_points": [
+     [
+      -12.725,
+      0.0
+     ],
+     [
+      12.725,
+      0.0
+     ]
+    ],
+    "three_point_radius": 7.24,
+    "three_point_corner_y": 6.7,
+    "key_half_width": 2.44,
+    "free_throw_line_x": 8.535,
+    "free_throw_circle_radius": 1.83,
+    "restricted_arc_radius": 1.22,
+    "center_circle_radius": 1.83,
+    "center_inner_circle_radius": 0.61
+   },
+   "court_texture": {
+    "name": "T_Court",
+    "size": [
+     8192,
+     4096
+    ],
+    "covers_x": [
+     -17.0,
+     17.0
+    ],
+    "covers_y": [
+     -8.5,
+     8.5
+    ],
+    "uv": "u=(x+17)/34, v=(y+8.5)/17 (image top = +Y, far sideline)",
+    "meters_per_texel": 0.004150390625
+   },
+   "mesh_extents": {
+    "SM_CourtFloor": {
+     "z": 0.0,
+     "x": [
+      -17.0,
+      17.0
+     ],
+     "y": [
+      -8.5,
+      8.5
+     ],
+     "material": "MI_Court"
+    },
+    "SM_ArenaFloor": {
+     "z": -0.01,
+     "x": [
+      -46.0,
+      46.0
+     ],
+     "y": [
+      -42.0,
+      42.0
+     ],
+     "material": "MI_ArenaFloor"
+    }
+   },
+   "note": "coordinates in court.json are Blender (x, y); glTF z = -y."
+  },
+  "arena": {
+   "file": "arena/arena.glb",
+   "bytes": 13419708,
+   "tris": 568316,
+   "meshes": {
+    "SM_ArenaBowl": {
+     "tris": 141184,
+     "materials": [
+      "MI_BowlConcrete",
+      "MI_BowlWall",
+      "MI_AisleStep",
+      "MI_ArenaShell",
+      "MI_RoofSteel",
+      "MI_ConcourseGlow",
+      "MI_SeatRed",
+      "MI_SeatDark"
+     ]
+    },
+    "SM_Banners": {
+     "tris": 224,
+     "materials": [
+      "MI_Banner",
+      "MI_Cable"
+     ]
+    },
+    "SM_Crowd_LowerFar": {
+     "tris": 53362,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_LowerLeft": {
+     "tris": 39160,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_LowerNear": {
+     "tris": 51636,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_LowerRight": {
+     "tris": 39634,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_UpperFar": {
+     "tris": 66492,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_UpperLeft": {
+     "tris": 49280,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_UpperNear": {
+     "tris": 66560,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Crowd_UpperRight": {
+     "tris": 48612,
+     "materials": [
+      "MI_Crowd"
+     ]
+    },
+    "SM_Jumbotron": {
+     "tris": 108,
+     "materials": [
+      "MI_JumboBody",
+      "MI_JumboScreen",
+      "MI_JumboRing",
+      "MI_Cable"
+     ]
+    },
+    "SM_LedRibbon_Courtside": {
+     "tris": 102,
+     "materials": [
+      "MI_LedRibbon"
+     ]
+    },
+    "SM_LedRibbon_Facade": {
+     "tris": 202,
+     "materials": [
+      "MI_LedFacade"
+     ]
+    },
+    "SM_LightRig": {
+     "tris": 7624,
+     "materials": [
+      "MI_Truss",
+      "MI_LightHousing",
+      "MI_LightPanel",
+      "MI_Cable"
+     ]
+    },
+    "SM_ScorerTable": {
+     "tris": 620,
+     "materials": [
+      "MI_ScorerTable",
+      "MI_ScorerTop",
+      "MI_ScorerLed",
+      "MI_Monitor",
+      "MI_BenchChair",
+      "MI_BenchFrame"
+     ]
+    },
+    "SM_TeamBenches": {
+     "tris": 3516,
+     "materials": [
+      "MI_BenchChair",
+      "MI_BenchFrame",
+      "MI_Cooler"
+     ]
+    }
+   },
+   "placement": "all nodes at the origin with identity transforms",
+   "crowd": {
+    "meshes": [
+     "SM_Crowd_LowerFar",
+     "SM_Crowd_LowerLeft",
+     "SM_Crowd_LowerNear",
+     "SM_Crowd_LowerRight",
+     "SM_Crowd_UpperFar",
+     "SM_Crowd_UpperLeft",
+     "SM_Crowd_UpperNear",
+     "SM_Crowd_UpperRight"
+    ],
+    "material": "MI_Crowd (extras.shader = 'crowd')",
+    "attributes": {
+     "COLOR_0": "unorm8 RGBA, linear RGB per face corner (shirt/skin/hair/pants/props), alpha = 1. three.js: geometry.attributes.color; GLTFLoader turns vertexColors on.",
+     "_FAN": "float32 VEC2, identical for every vertex of one fan. x = phase 0..1, y = bounce amplitude 0..1 (seated 0.05-0.35, standing 0.45-0.8, clap 0.5-0.85, pump 0.65-0.95, arms-up 0.75-1.0). three.js: geometry.attributes._fan (GLTFLoader lower-cases custom attribute names).",
+     "TEXCOORD_0": "removed (it held the same phase/amplitude with V flipped; _FAN replaces it)"
+    },
+    "unreal_formula": "height_m = abs(sin(2*pi*(time*(0.9 + 1.6*excitement) + phase))) * amplitude * (0.03 + 0.24*excitement); offset world +Y (up). excitement 0..1 (idles at 0.12, 1 on big plays; AHCArena::Tick).",
+    "positions": "float32 metres at identity node transforms, so a vertex-shader offset of h metres along local +Y is h metres in the world.",
+    "unreal_quality": "Unreal hides the upper-deck crowd (SM_Crowd_Upper*) at the lowest view-distance setting and only animates it at the higher ones.",
+    "stats": {
+     "seats": 6354,
+     "fans": 5754,
+     "poses": {
+      "seated": 3849,
+      "standing": 718,
+      "clap": 557,
+      "armsup": 403,
+      "pump": 227
+     }
+    }
+   }
+  },
+  "arena_lite": {
+   "file": "arena/arena_lite.glb",
+   "bytes": 10107844,
+   "tris": 269568,
+   "meshes": {
+    "SM_ArenaBowl": 70592,
+    "SM_Banners": 224,
+    "SM_Crowd_LowerFar": 23998,
+    "SM_Crowd_LowerLeft": 17619,
+    "SM_Crowd_LowerNear": 23225,
+    "SM_Crowd_LowerRight": 17825,
+    "SM_Crowd_UpperFar": 29918,
+    "SM_Crowd_UpperLeft": 22176,
+    "SM_Crowd_UpperNear": 29949,
+    "SM_Crowd_UpperRight": 21870,
+    "SM_Jumbotron": 108,
+    "SM_LedRibbon_Courtside": 102,
+    "SM_LedRibbon_Facade": 202,
+    "SM_LightRig": 7624,
+    "SM_ScorerTable": 620,
+    "SM_TeamBenches": 3516
+   },
+   "note": "Blender collapse-decimate: SM_ArenaBowl 50%, every SM_Crowd_* 45%; everything else unchanged. Same node/material names and crowd attributes."
+  },
+  "hoop": {
+   "file": "arena/hoop.glb",
+   "bytes": 398960,
+   "tris": 11944,
+   "space": "hoop-local: origin = floor point under the rim centre, court toward +X. Place one at x=-12.725 (no rotation) and one at x=+12.725 rotated 180 deg about Y.",
+   "nodes": {
+    "SM_Backboard": {
+     "translation_gltf": [
+      0,
+      0,
+      0
+     ],
+     "pivot": "hoop origin"
+    },
+    "SM_BackboardFrame": {
+     "translation_gltf": [
+      0,
+      0,
+      0
+     ],
+     "pivot": "hoop origin"
+    },
+    "SM_HoopStanchion": {
+     "translation_gltf": [
+      0,
+      0,
+      0
+     ],
+     "pivot": "hoop origin"
+    },
+    "SM_Net": {
+     "translation_gltf": [
+      0,
+      3.049999952316284,
+      0
+     ],
+     "pivot": "rim centre"
+    },
+    "SM_Rim": {
+     "translation_gltf": [
+      -0.3799999952316284,
+      3.049999952316284,
+      0
+     ],
+     "pivot": "rim mount point on the glass"
+    }
+   },
+   "dimensions_m": {
+    "rim_center": [
+     0.0,
+     0.0,
+     3.05
+    ],
+    "rim_inner_radius": 0.2286,
+    "rim_tube_radius": 0.01,
+    "glass": {
+     "x": [
+      -0.41,
+      -0.38
+     ],
+     "y": [
+      -0.915,
+      0.915
+     ],
+     "z": [
+      2.9,
+      3.97
+     ]
+    },
+    "inner_rectangle": {
+     "width": 0.59,
+     "height": 0.45,
+     "bottom_z": 3.05,
+     "plane_x": -0.376
+    },
+    "net": {
+     "top_radius": 0.235,
+     "bottom_radius": 0.14,
+     "length": 0.42,
+     "diamonds_around": 12
+    },
+    "stanchion_base": {
+     "x": [
+      -3.9,
+      -2.3
+     ],
+     "y": [
+      -0.66,
+      0.66
+     ],
+     "z": [
+      0.0,
+      0.975
+     ]
+    },
+    "shot_clock": {
+     "x": [
+      -0.52,
+      -0.3
+     ],
+     "y": [
+      -0.33,
+      0.33
+     ],
+     "z": [
+      4.02,
+      4.3
+     ]
+    }
+   },
+   "animatable": {
+    "MI_BackboardLED": "emissive strip around the board edge; pulse emissive_strength for 'heat check' moments",
+    "SM_Rim": "rotate about its pivot (the mount) for dunk rim-bend",
+    "SM_Net": "scale/offset about its pivot (rim centre) for the swish"
+   },
+   "note": "hoop.json values are Blender (x, y, z); glTF = (x, z, -y)."
+  },
+  "ball": {
+   "file": "arena/ball.glb",
+   "bytes": 204372,
+   "tris": 1848,
+   "radius_m": 0.12,
+   "pivot": "ball centre",
+   "texture": "T_Ball 1024x512 JPEG (embedded)"
+  }
+ },
+ "textures": {
+  "dir": "textures/",
+  "files": [
+   "textures/T_Flame.png",
+   "textures/T_Glow.png",
+   "textures/T_ShotClock.png",
+   "textures/T_Spark.png"
+  ],
+  "note": "loose sprites for FX (additive): T_Flame, T_Glow, T_Spark; T_ShotClock digits"
+ },
+ "ui": {
+  "dir": "ui/",
+  "files": [
+   "ui/UI_Logo.png",
+   "ui/UI_Team_BAY.png",
+   "ui/UI_Team_FRB.png",
+   "ui/UI_Team_NEO.png",
+   "ui/UI_Team_RRK.png",
+   "ui/UI_Team_SSC.png",
+   "ui/UI_Team_STV.png"
+  ]
+ },
+ "audio": {
+  "manifest": "audio/manifest.json",
+  "count": 82,
+  "loops_with_ogg": [
+   "M_Halftime",
+   "M_Title",
+   "S_CrowdLoop",
+   "S_FireLoop"
+  ]
+ },
+ "files": [
+  {
+   "path": "arena/arena.glb",
+   "bytes": 13419708
+  },
+  {
+   "path": "arena/arena_lite.glb",
+   "bytes": 10107844
+  },
+  {
+   "path": "arena/ball.glb",
+   "bytes": 204372
+  },
+  {
+   "path": "arena/court.glb",
+   "bytes": 1856720
+  },
+  {
+   "path": "arena/hoop.glb",
+   "bytes": 398960
+  },
+  {
+   "path": "audio/M_Halftime.mp3",
+   "bytes": 683564
+  },
+  {
+   "path": "audio/M_Halftime.ogg",
+   "bytes": 697983
+  },
+  {
+   "path": "audio/M_Title.mp3",
+   "bytes": 603308
+  },
+  {
+   "path": "audio/M_Title.ogg",
+   "bytes": 638608
+  },
+  {
+   "path": "audio/S_Backboard.mp3",
+   "bytes": 7244
+  },
+  {
+   "path": "audio/S_Block.mp3",
+   "bytes": 4076
+  },
+  {
+   "path": "audio/S_Bounce_01.mp3",
+   "bytes": 3788
+  },
+  {
+   "path": "audio/S_Bounce_02.mp3",
+   "bytes": 3788
+  },
+  {
+   "path": "audio/S_Bounce_03.mp3",
+   "bytes": 3788
+  },
+  {
+   "path": "audio/S_Buzzer.mp3",
+   "bytes": 20492
+  },
+  {
+   "path": "audio/S_Countdown.mp3",
+   "bytes": 2060
+  },
+  {
+   "path": "audio/S_CrowdBigCheer.mp3",
+   "bytes": 72236
+  },
+  {
+   "path": "audio/S_CrowdCheer_01.mp3",
+   "bytes": 39596
+  },
+  {
+   "path": "audio/S_CrowdCheer_02.mp3",
+   "bytes": 39980
+  },
+  {
+   "path": "audio/S_CrowdGroan.mp3",
+   "bytes": 24620
+  },
+  {
+   "path": "audio/S_CrowdLoop.mp3",
+   "bytes": 192812
+  },
+  {
+   "path": "audio/S_CrowdLoop.ogg",
+   "bytes": 189196
+  },
+  {
+   "path": "audio/S_CrowdOoh.mp3",
+   "bytes": 23852
+  },
+  {
+   "path": "audio/S_DunkSlam.mp3",
+   "bytes": 13868
+  },
+  {
+   "path": "audio/S_Fall.mp3",
+   "bytes": 6092
+  },
+  {
+   "path": "audio/S_FireBasket.mp3",
+   "bytes": 15020
+  },
+  {
+   "path": "audio/S_FireIgnite.mp3",
+   "bytes": 18764
+  },
+  {
+   "path": "audio/S_FireLoop.mp3",
+   "bytes": 48716
+  },
+  {
+   "path": "audio/S_FireLoop.ogg",
+   "bytes": 43435
+  },
+  {
+   "path": "audio/S_Pass.mp3",
+   "bytes": 3788
+  },
+  {
+   "path": "audio/S_RimHit_01.mp3",
+   "bytes": 8684
+  },
+  {
+   "path": "audio/S_RimHit_02.mp3",
+   "bytes": 8684
+  },
+  {
+   "path": "audio/S_RimHit_03.mp3",
+   "bytes": 8684
+  },
+  {
+   "path": "audio/S_Score.mp3",
+   "bytes": 5804
+  },
+  {
+   "path": "audio/S_ShotClock.mp3",
+   "bytes": 10700
+  },
+  {
+   "path": "audio/S_Shove.mp3",
+   "bytes": 4652
+  },
+  {
+   "path": "audio/S_Squeak_01.mp3",
+   "bytes": 2924
+  },
+  {
+   "path": "audio/S_Squeak_02.mp3",
+   "bytes": 3500
+  },
+  {
+   "path": "audio/S_Squeak_03.mp3",
+   "bytes": 3788
+  },
+  {
+   "path": "audio/S_Squeak_04.mp3",
+   "bytes": 2348
+  },
+  {
+   "path": "audio/S_Steal.mp3",
+   "bytes": 3500
+  },
+  {
+   "path": "audio/S_Swish_01.mp3",
+   "bytes": 7244
+  },
+  {
+   "path": "audio/S_Swish_02.mp3",
+   "bytes": 7820
+  },
+  {
+   "path": "audio/S_UI_Back.mp3",
+   "bytes": 2636
+  },
+  {
+   "path": "audio/S_UI_Move.mp3",
+   "bytes": 1772
+  },
+  {
+   "path": "audio/S_UI_Select.mp3",
+   "bytes": 4076
+  },
+  {
+   "path": "audio/S_UI_Start.mp3",
+   "bytes": 12140
+  },
+  {
+   "path": "audio/S_Whistle.mp3",
+   "bytes": 8684
+  },
+  {
+   "path": "audio/VO_AlleyOop.mp3",
+   "bytes": 14156
+  },
+  {
+   "path": "audio/VO_Block_01.mp3",
+   "bytes": 15596
+  },
+  {
+   "path": "audio/VO_Block_02.mp3",
+   "bytes": 14444
+  },
+  {
+   "path": "audio/VO_Block_03.mp3",
+   "bytes": 21068
+  },
+  {
+   "path": "audio/VO_Buzzer.mp3",
+   "bytes": 15596
+  },
+  {
+   "path": "audio/VO_Dunk_01.mp3",
+   "bytes": 15020
+  },
+  {
+   "path": "audio/VO_Dunk_02.mp3",
+   "bytes": 18188
+  },
+  {
+   "path": "audio/VO_Dunk_03.mp3",
+   "bytes": 17900
+  },
+  {
+   "path": "audio/VO_Dunk_04.mp3",
+   "bytes": 20204
+  },
+  {
+   "path": "audio/VO_Dunk_05.mp3",
+   "bytes": 16460
+  },
+  {
+   "path": "audio/VO_EndQuarter.mp3",
+   "bytes": 18188
+  },
+  {
+   "path": "audio/VO_FinalBuzzer.mp3",
+   "bytes": 17900
+  },
+  {
+   "path": "audio/VO_FireOut.mp3",
+   "bytes": 16460
+  },
+  {
+   "path": "audio/VO_Fire_01.mp3",
+   "bytes": 18764
+  },
+  {
+   "path": "audio/VO_Fire_02.mp3",
+   "bytes": 28556
+  },
+  {
+   "path": "audio/VO_Fire_03.mp3",
+   "bytes": 19916
+  },
+  {
+   "path": "audio/VO_Goaltending.mp3",
+   "bytes": 17036
+  },
+  {
+   "path": "audio/VO_Halftime.mp3",
+   "bytes": 21356
+  },
+  {
+   "path": "audio/VO_Miss_01.mp3",
+   "bytes": 15596
+  },
+  {
+   "path": "audio/VO_Miss_02.mp3",
+   "bytes": 12716
+  },
+  {
+   "path": "audio/VO_Overtime.mp3",
+   "bytes": 23372
+  },
+  {
+   "path": "audio/VO_Score_01.mp3",
+   "bytes": 14156
+  },
+  {
+   "path": "audio/VO_Score_02.mp3",
+   "bytes": 13292
+  },
+  {
+   "path": "audio/VO_Score_03.mp3",
+   "bytes": 17324
+  },
+  {
+   "path": "audio/VO_ShotClock.mp3",
+   "bytes": 24524
+  },
+  {
+   "path": "audio/VO_Shove_01.mp3",
+   "bytes": 15884
+  },
+  {
+   "path": "audio/VO_Shove_02.mp3",
+   "bytes": 16172
+  },
+  {
+   "path": "audio/VO_Steal_01.mp3",
+   "bytes": 14732
+  },
+  {
+   "path": "audio/VO_Steal_02.mp3",
+   "bytes": 16460
+  },
+  {
+   "path": "audio/VO_Team_BAY.mp3",
+   "bytes": 21932
+  },
+  {
+   "path": "audio/VO_Team_FRB.mp3",
+   "bytes": 21644
+  },
+  {
+   "path": "audio/VO_Team_NEO.mp3",
+   "bytes": 22508
+  },
+  {
+   "path": "audio/VO_Team_RRK.mp3",
+   "bytes": 21356
+  },
+  {
+   "path": "audio/VO_Team_SSC.mp3",
+   "bytes": 22796
+  },
+  {
+   "path": "audio/VO_Team_STV.mp3",
+   "bytes": 21068
+  },
+  {
+   "path": "audio/VO_Three_01.mp3",
+   "bytes": 22508
+  },
+  {
+   "path": "audio/VO_Three_02.mp3",
+   "bytes": 24236
+  },
+  {
+   "path": "audio/VO_Three_03.mp3",
+   "bytes": 19052
+  },
+  {
+   "path": "audio/VO_TipOff.mp3",
+   "bytes": 16748
+  },
+  {
+   "path": "audio/VO_TipOff_02.mp3",
+   "bytes": 14444
+  },
+  {
+   "path": "audio/VO_Warm_01.mp3",
+   "bytes": 18188
+  },
+  {
+   "path": "audio/VO_Warm_02.mp3",
+   "bytes": 15020
+  },
+  {
+   "path": "audio/VO_Welcome.mp3",
+   "bytes": 21068
+  },
+  {
+   "path": "audio/manifest.json",
+   "bytes": 29570
+  },
+  {
+   "path": "characters/anims.json",
+   "bytes": 2681
+  },
+  {
+   "path": "characters/player.glb",
+   "bytes": 3129472
+  },
+  {
+   "path": "characters/referee.glb",
+   "bytes": 613816
+  },
+  {
+   "path": "characters/referee_anims.json",
+   "bytes": 333
+  },
+  {
+   "path": "textures/T_Flame.png",
+   "bytes": 34265
+  },
+  {
+   "path": "textures/T_Glow.png",
+   "bytes": 6619
+  },
+  {
+   "path": "textures/T_ShotClock.png",
+   "bytes": 10467
+  },
+  {
+   "path": "textures/T_Spark.png",
+   "bytes": 2318
+  },
+  {
+   "path": "ui/UI_Logo.png",
+   "bytes": 385413
+  },
+  {
+   "path": "ui/UI_Team_BAY.png",
+   "bytes": 58892
+  },
+  {
+   "path": "ui/UI_Team_FRB.png",
+   "bytes": 49465
+  },
+  {
+   "path": "ui/UI_Team_NEO.png",
+   "bytes": 53271
+  },
+  {
+   "path": "ui/UI_Team_RRK.png",
+   "bytes": 59048
+  },
+  {
+   "path": "ui/UI_Team_SSC.png",
+   "bytes": 57606
+  },
+  {
+   "path": "ui/UI_Team_STV.png",
+   "bytes": 52492
+  }
+ ],
+ "total_bytes": 34835250
+}

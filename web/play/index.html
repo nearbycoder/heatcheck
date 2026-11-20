@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0b0b10">
+  <title>HEAT CHECK — Play</title>
+  <meta name="description" content="Play HEAT CHECK, an original 2-on-2 arcade basketball game, right in your browser.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/game.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.min.js",
+      "three/addons/": "./vendor/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="view" aria-label="HEAT CHECK game view"></canvas>
+
+    <div id="hud" aria-live="polite">
+      <div id="scoreboard" hidden>
+        <div class="sb-team sb-left"><span class="sb-abbr"></span><span class="sb-name"></span></div>
+        <div class="sb-score sb-score-left">0</div>
+        <div class="sb-mid"><span class="sb-quarter">QUARTER 1</span><span class="sb-clock">3:00</span></div>
+        <div class="sb-score sb-score-right">0</div>
+        <div class="sb-team sb-right"><span class="sb-abbr"></span><span class="sb-name"></span></div>
+        <div class="sb-shot"><span>24</span></div>
+      </div>
+      <div id="cards" hidden>
+        <div class="cards-side cards-left"></div>
+        <div class="cards-side cards-right"></div>
+      </div>
+      <div id="popups"></div>
+      <div id="meter" hidden><div class="meter-win"></div><div class="meter-fill"></div></div>
+      <div id="tags"></div>
+      <div id="fps" hidden></div>
+    </div>
+
+    <div id="screens"></div>
+
+    <div id="touch" hidden>
+      <div class="tc-stick"><div class="tc-knob"></div></div>
+      <div class="tc-buttons">
+        <button class="tc-btn tc-shove" data-tc="shove" aria-label="Shove">SHOVE</button>
+        <button class="tc-btn tc-pass" data-tc="pass" aria-label="Pass or steal">PASS</button>
+        <button class="tc-btn tc-turbo" data-tc="turbo" aria-label="Turbo">TURBO</button>
+        <button class="tc-btn tc-shoot" data-tc="shoot" aria-label="Shoot, jump or block">SHOOT</button>
+      </div>
+      <button class="tc-pause" data-tc="pause" aria-label="Pause">II</button>
+    </div>
+
+    <div id="loading">
+      <img src="assets/ui/UI_Logo.png" alt="HEAT CHECK" class="load-logo">
+      <div class="load-bar"><div class="load-fill"></div></div>
+      <div class="load-text">LOADING THE ARENA…</div>
+      <noscript><p class="load-error">HEAT CHECK needs JavaScript and WebGL to run.</p></noscript>
+    </div>
+    <div id="rotate" hidden>
+      <div>ROTATE YOUR DEVICE</div>
+      <small>HEAT CHECK plays in landscape</small>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

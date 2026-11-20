@@ -1,0 +1,19 @@
+# Unreal generated
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+*.xcworkspace
+*.xcodeproj
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+# Blender backups
+*.blend1
+# macOS
+.DS_Store
+# Packaged builds
+Build/Packaged/
+# Python caches from the generators
+__pycache__/
+*.pyc

@@ -1,0 +1,165 @@
+{
+  "Idle": {
+    "frames": 60,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "Defense": {
+    "frames": 24,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "DribbleIdle": {
+    "frames": 16,
+    "fps": 30,
+    "loop": true,
+    "events": {
+      "ball_contact": 0,
+      "ball_floor": 7
+    }
+  },
+  "Run": {
+    "frames": 18,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "Sprint": {
+    "frames": 16,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "RunDribble": {
+    "frames": 18,
+    "fps": 30,
+    "loop": true,
+    "events": {
+      "ball_contact": 0,
+      "ball_floor": 8
+    }
+  },
+  "HoldBall": {
+    "frames": 30,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "JumpShot": {
+    "frames": 30,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "set_frame": 13,
+      "release_frame": 16
+    }
+  },
+  "Layup": {
+    "frames": 26,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "release_frame": 12
+    }
+  },
+  "Dunk": {
+    "frames": 40,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "air_frame": 12,
+      "slam_frame": 24,
+      "hang_frame": 28
+    }
+  },
+  "DunkWindmill": {
+    "frames": 40,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "air_frame": 10,
+      "slam_frame": 24,
+      "hang_frame": 28
+    }
+  },
+  "Pass": {
+    "frames": 14,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "release_frame": 6
+    }
+  },
+  "Shove": {
+    "frames": 18,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "impact_frame": 6
+    }
+  },
+  "Steal": {
+    "frames": 14,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "contact_frame": 5
+    }
+  },
+  "Block": {
+    "frames": 26,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "apex_frame": 9
+    }
+  },
+  "Fall": {
+    "frames": 26,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "ground_frame": 11
+    }
+  },
+  "GetUp": {
+    "frames": 26,
+    "fps": 30,
+    "loop": false,
+    "events": {}
+  },
+  "Celebrate": {
+    "frames": 32,
+    "fps": 30,
+    "loop": false,
+    "events": {}
+  },
+  "ShuffleLeft": {
+    "frames": 16,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "ShuffleRight": {
+    "frames": 16,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "Backpedal": {
+    "frames": 16,
+    "fps": 30,
+    "loop": true,
+    "events": {}
+  },
+  "Land": {
+    "frames": 11,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "ground_frame": 2
+    }
+  }
+}

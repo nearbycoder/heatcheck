@@ -1,0 +1,25 @@
+{
+  "MI_ArenaFloor": {
+    "color": [
+      0.0103,
+      0.011,
+      0.0144
+    ],
+    "metallic": 0.0,
+    "roughness": 0.45,
+    "shader": "opaque",
+    "specular": 0.5
+  },
+  "MI_Court": {
+    "color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "metallic": 0.0,
+    "roughness": 0.22,
+    "shader": "opaque",
+    "specular": 0.6,
+    "texture": "T_Court"
+  }
+}

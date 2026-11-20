@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air ball! (404) | HEAT CHECK</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0a0d">
+  <!-- GitHub Pages serves this page at any missing path, so asset URLs are resolved against the site root below. -->
+  <base href="/heatcheck/">
+  <script>
+    // Local preview (not under /heatcheck/): point <base> at this file's own folder instead.
+    if (location.pathname.indexOf('/heatcheck/') !== 0) {
+      document.querySelector('base').href = location.pathname.replace(/[^/]*$/, '');
+    }
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .lost { min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 40px 0; position: relative; overflow: hidden; }
+    .lost::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 110%, rgba(255, 61, 31, .35), transparent 70%),
+        repeating-linear-gradient(180deg, transparent 0 2px, rgba(0, 0, 0, .22) 2px 3px);
+    }
+    .lost__inner { position: relative; display: flex; flex-direction: column; align-items: center; }
+    .lost__logo { width: min(320px, 70vw); margin-bottom: 20px; filter: drop-shadow(0 0 40px rgba(255, 106, 26, .3)); }
+    .board {
+      display: inline-flex; gap: 6px; margin: 0 0 10px; padding: 10px 16px;
+      border: 2px solid #2a1a10; border-radius: 10px; background: #070506;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, .9);
+    }
+    .board span {
+      position: relative;
+      font: 400 clamp(4.5rem, 18vw, 8rem)/1 var(--font-display); letter-spacing: .04em;
+      color: #ffb02a; text-shadow: 0 0 12px rgba(255, 140, 26, .8), 0 0 30px rgba(255, 80, 26, .45);
+    }
+    .lost h1 { font: 400 clamp(2.4rem, 8vw, 4.4rem)/1 var(--font-display); text-transform: uppercase; margin: 18px 0 12px; }
+    .lost p { color: var(--ink-2); max-width: 44ch; margin-inline: auto; }
+    .lost .cta-row { margin-top: 26px; }
+    .lost .btn-play { font-size: clamp(1.3rem, 4vw, 1.9rem); }
+  </style>
+</head>
+<body>
+  <main class="lost">
+    <div class="lost__inner wrap">
+      <a href="./" aria-label="HEAT CHECK home"><img class="lost__logo" src="media/logo-sm.webp" alt="HEAT CHECK" width="480" height="240"></a>
+      <p class="board" aria-label="Error 404"><span aria-hidden="true">4</span><span aria-hidden="true">0</span><span aria-hidden="true">4</span></p>
+      <h1>Air <span class="fire-text">ball!</span></h1>
+      <p>That page clanked off the back iron. It doesn&rsquo;t exist, or it moved.</p>
+      <div class="cta-row">
+        <a class="btn-play" href="play/">
+          <svg class="btn-play__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+          <span>Play in your browser</span>
+        </a>
+        <a class="btn-ghost" href="./">Back to the home page</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

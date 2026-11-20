@@ -1,0 +1,75 @@
+{
+  "note": "Blender meters, Unreal cm = (100x, -100y, 100z). Both meshes use the world origin as pivot.",
+  "texture": {
+    "name": "T_Court",
+    "size": [
+      8192,
+      4096
+    ],
+    "covers_x": [
+      -17.0,
+      17.0
+    ],
+    "covers_y": [
+      -8.5,
+      8.5
+    ],
+    "uv": "u=(x+17)/34, v=(y+8.5)/17 (image top = +Y, far sideline)",
+    "meters_per_texel": 0.004150390625
+  },
+  "court": {
+    "boundary_outer_x": [
+      -14.325,
+      14.325
+    ],
+    "boundary_outer_y": [
+      -7.62,
+      7.62
+    ],
+    "line_width": 0.05,
+    "rim_floor_points": [
+      [
+        -12.725,
+        0.0
+      ],
+      [
+        12.725,
+        0.0
+      ]
+    ],
+    "three_point_radius": 7.24,
+    "three_point_corner_y": 6.7,
+    "key_half_width": 2.44,
+    "free_throw_line_x": 8.535,
+    "free_throw_circle_radius": 1.83,
+    "restricted_arc_radius": 1.22,
+    "center_circle_radius": 1.83,
+    "center_inner_circle_radius": 0.61
+  },
+  "meshes": {
+    "SM_CourtFloor": {
+      "z": 0.0,
+      "x": [
+        -17.0,
+        17.0
+      ],
+      "y": [
+        -8.5,
+        8.5
+      ],
+      "material": "MI_Court"
+    },
+    "SM_ArenaFloor": {
+      "z": -0.01,
+      "x": [
+        -46.0,
+        46.0
+      ],
+      "y": [
+        -42.0,
+        42.0
+      ],
+      "material": "MI_ArenaFloor"
+    }
+  }
+}

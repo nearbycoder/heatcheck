@@ -1,0 +1,97 @@
+{
+  "MI_BackboardLED": {
+    "color": [
+      1.0,
+      0.0232,
+      0.0052
+    ],
+    "emissive_strength": 2.0,
+    "shader": "emissive"
+  },
+  "MI_Glass": {
+    "color": [
+      0.85,
+      0.93,
+      1.0
+    ],
+    "opacity": 0.18,
+    "roughness": 0.03,
+    "shader": "glass"
+  },
+  "MI_HoopWhite": {
+    "color": [
+      0.8879,
+      0.8879,
+      0.8879
+    ],
+    "metallic": 0.0,
+    "roughness": 0.35,
+    "shader": "opaque",
+    "specular": 0.5
+  },
+  "MI_MetalDark": {
+    "color": [
+      0.0296,
+      0.0331,
+      0.0423
+    ],
+    "metallic": 0.85,
+    "roughness": 0.35,
+    "shader": "opaque",
+    "specular": 0.5
+  },
+  "MI_Net": {
+    "color": [
+      0.92,
+      0.92,
+      0.9
+    ],
+    "metallic": 0.0,
+    "roughness": 0.9,
+    "shader": "opaque",
+    "specular": 0.3
+  },
+  "MI_RimOrange": {
+    "color": [
+      1.0,
+      0.25,
+      0.03
+    ],
+    "metallic": 0.7,
+    "roughness": 0.35,
+    "shader": "opaque",
+    "specular": 0.5
+  },
+  "MI_ShotClock": {
+    "color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "emissive_strength": 3.0,
+    "shader": "emissive",
+    "texture": "T_ShotClock"
+  },
+  "MI_StanchionDark": {
+    "color": [
+      0.011,
+      0.0116,
+      0.0152
+    ],
+    "metallic": 0.0,
+    "roughness": 0.5,
+    "shader": "opaque",
+    "specular": 0.5
+  },
+  "MI_StanchionPad": {
+    "color": [
+      0.6308,
+      0.0168,
+      0.0048
+    ],
+    "metallic": 0.0,
+    "roughness": 0.45,
+    "shader": "opaque",
+    "specular": 0.5
+  }
+}

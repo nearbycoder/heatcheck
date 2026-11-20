@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEAT CHECK: 2-on-2 arcade basketball, playable in your browser</title>
+  <meta name="description" content="HEAT CHECK is an original 2-on-2 arcade basketball game: turbo, windmill and 360 dunks, alley-oops, shoving with no fouls, and players who heat up and catch ON FIRE. Play it free in your browser.">
+  <meta name="theme-color" content="#0b0a0d">
+  <link rel="canonical" href="https://nearbycoder.github.io/heatcheck/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HEAT CHECK">
+  <meta property="og:title" content="HEAT CHECK: 2-on-2 arcade basketball">
+  <meta property="og:description" content="Turbo, sky-high dunks, shoving with no fouls, and players who catch ON FIRE. Play free in your browser.">
+  <meta property="og:url" content="https://nearbycoder.github.io/heatcheck/">
+  <meta property="og:image" content="https://nearbycoder.github.io/heatcheck/media/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The HEAT CHECK flaming logo over a dunk in a packed arena">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HEAT CHECK: 2-on-2 arcade basketball">
+  <meta name="twitter:description" content="Turbo, sky-high dunks, shoving with no fouls, and players who catch ON FIRE. Play free in your browser.">
+  <meta name="twitter:image" content="https://nearbycoder.github.io/heatcheck/media/og.jpg">
+  <meta name="twitter:image:alt" content="The HEAT CHECK flaming logo over a dunk in a packed arena">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="media/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="preload" as="image" href="media/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="./" aria-label="HEAT CHECK home">
+        <img src="favicon.svg" alt="" width="32" height="32">
+        <span>Heat Check</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#game">The game</a></li>
+        <li><a href="#how-to-play">How to play</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#built">Built from code</a></li>
+      </ul>
+      <a class="nav-play" href="play/">Play <span class="hide-sm">now</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-poster" src="media/hero-poster.jpg" alt="" width="1280" height="720" fetchpriority="high">
+        <video class="hero-video" muted playsinline preload="none" data-src="media/movement.mp4" data-start="2" tabindex="-1"></video>
+      </div>
+      <div class="hero-fx" aria-hidden="true"></div>
+
+      <div class="hero-inner wrap">
+        <p class="eyebrow eyebrow--hero"><span class="dot" aria-hidden="true"></span> 2-on-2 arcade basketball</p>
+        <h1 id="hero-title" class="hero-logo">
+          <picture>
+            <source srcset="media/logo.webp" type="image/webp">
+            <img src="media/logo.png" alt="HEAT CHECK" width="1200" height="600">
+          </picture>
+        </h1>
+        <p class="tagline">Turbo sprints. Sky-high dunks. Shoving with no fouls. Hit three straight and you&rsquo;re <strong class="fire-text">on&nbsp;fire</strong>.</p>
+
+        <div class="cta-row">
+          <a class="btn-play" href="play/">
+            <svg class="btn-play__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <span>Play in your browser</span>
+          </a>
+          <a class="btn-ghost" href="https://github.com/nearbycoder/heatcheck">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            <span>View on GitHub</span>
+          </a>
+        </div>
+
+        <ul class="hero-meta" aria-label="At a glance">
+          <li>Free</li>
+          <li>No install</li>
+          <li>Keyboard or gamepad</li>
+          <li>1&ndash;2 players</li>
+        </ul>
+        <p class="touch-note" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h10a5 5 0 0 1 4.9 6l-.9 4.5a2.6 2.6 0 0 1-4.6 1L14.6 15H9.4l-1.8 2.5a2.6 2.6 0 0 1-4.6-1L2.1 12A5 5 0 0 1 7 6zm1 3v2H6v2h2v2h2v-2h2v-2h-2V9zm8.5 1a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm-1.5 3a1.25 1.25 0 1 0 0 2.5A1.25 1.25 0 0 0 15 13z"/></svg>
+          <span>On a phone or tablet? The game needs a keyboard or a gamepad for now. Touch controls may come later.</span>
+        </p>
+        <p class="port-note">The browser version is a Three.js web port of the Unreal Engine desktop game. The desktop build and all its source live in <a href="https://github.com/nearbycoder/heatcheck">the repo</a>.</p>
+      </div>
+    </section>
+
+    <!-- LED RIBBON -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>Heating up</span><span>On fire</span><span>No fouls</span><span>Turbo</span><span>Alley-oop</span><span>Posterized!</span><span>Big head mode</span><span>Rejected!</span><span>Buzzer beater</span><span>Shoved!</span>
+        <span>Heating up</span><span>On fire</span><span>No fouls</span><span>Turbo</span><span>Alley-oop</span><span>Posterized!</span><span>Big head mode</span><span>Rejected!</span><span>Buzzer beater</span><span>Shoved!</span>
+      </div>
+    </div>
+
+    <!-- THE GAME -->
+    <section id="game" class="section" aria-labelledby="game-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">The game</p>
+          <h2 id="game-title">Arcade rules. No refs.<br> <span class="fire-text">All heat.</span></h2>
+          <p class="lede">HEAT CHECK is an original, over-the-top 2-on-2 arcade basketball game in the spirit of the 90s cabinets. Four quarters of turbo, ten-foot-high dunks and legal shoving. Every model, texture, animation and sound in it was generated from code.</p>
+        </header>
+
+        <div class="showcase reveal">
+          <figure class="showcase__media">
+            <picture>
+              <source srcset="media/gameplay-dunk.webp" type="image/webp">
+              <img src="media/gameplay-dunk.jpg" alt="In-game: the Bay Harbor Krakens lead the Neon City Voltage 2 to 0 as the call-out POSTERIZED! flashes over the court after a dunk." width="1600" height="900" loading="lazy">
+            </picture>
+          </figure>
+          <div class="showcase__copy">
+            <p class="callout" aria-hidden="true">Posterized!</p>
+            <p>Hold turbo, drive the lane and press Shoot inside dunk range. The announcer, the crowd and the backboard all let the other team know about it.</p>
+          </div>
+        </div>
+
+        <ul class="features" role="list">
+          <li class="feature reveal">
+            <span class="feature__tag">Hold to burn</span>
+            <h3>Turbo</h3>
+            <p>Sprint past defenders, chase down breaks and power up every move. Watch the stamina bar under your name.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Turbo + Shoot</span>
+            <h3>Dunks</h3>
+            <p>Distance picks the style: two-hand, <strong>windmill</strong>, <strong>360</strong>, <strong>reverse</strong>, and a <strong>flip</strong> when you&rsquo;re on fire.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Turbo + Pass</span>
+            <h3>Alley-oops</h3>
+            <p>Lob it to a teammate cutting to the rim and they finish it above the cylinder.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">No fouls. Ever.</span>
+            <h3>Shoving</h3>
+            <p>Push a ball handler back to jar it loose, or clear space for your teammate. Turbo + Shove knocks them flat.</p>
+          </li>
+          <li class="feature feature--fire reveal">
+            <div class="fire-meter" aria-hidden="true">
+              <span class="pip"><b>1</b><i>Bucket</i></span>
+              <span class="pip pip--warm"><b>2</b><i>Heating up</i></span>
+              <span class="pip pip--hot"><b>3</b><i>On fire</i></span>
+            </div>
+            <span class="feature__tag">2 in a row &rarr; 3 in a row</span>
+            <h3>Heating up &rarr; <span class="fire-text">On fire</span></h3>
+            <p>Make two straight without the other team scoring and you&rsquo;re heating up. Make three and you&rsquo;re <strong>ON FIRE</strong>: unlimited turbo, deadly shooting, longer dunk range, harder shoves and steals, a flame trail on the ball and a burning net. You can even goaltend. It lasts until they score or you hit four more.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Shoot on defense</span>
+            <h3>Blocks</h3>
+            <p>Time your jump and send it into the third row. Swat it on the way down, though, and it&rsquo;s goaltending.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Rookie &middot; Pro &middot; Legend</span>
+            <h3>CPU catch-up</h3>
+            <p>Just like the old cabinets, the CPU finds a little extra when it falls far behind. How much depends on difficulty.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Option menu</span>
+            <h3>Big head mode</h3>
+            <p>Exactly what it sounds like. Flip it on before tip-off.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__tag">Same keyboard or pads</span>
+            <h3>2 players</h3>
+            <p>Team up in <strong>co-op</strong> against the CPU, or go <strong>head-to-head</strong> with a CPU teammate each. Or just watch CPU vs CPU.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW TO PLAY -->
+    <section id="how-to-play" class="section section--alt" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">How to play</p>
+          <h2 id="how-title">Grab a pad.<br> Find your <span class="fire-text">release</span>.</h2>
+          <p class="lede">Pick a mode, choose both teams, and the referee tosses the jump ball. Press <strong>Shoot</strong> after the release to tip it to your teammate.</p>
+        </header>
+
+        <p class="callout-box reveal" role="note"><strong>The browser version supports keyboard and gamepad.</strong> Plug in a controller and press any button so your browser can see it. Two players can share one keyboard, or use a pad each.</p>
+
+        <div class="table-wrap reveal">
+          <table class="controls">
+            <caption class="visually-hidden">Controls for player 1 on keyboard and gamepad, and player 2 on keyboard</caption>
+            <thead>
+              <tr>
+                <th scope="col">Action</th>
+                <th scope="col">Player 1 <small>keyboard</small></th>
+                <th scope="col">Player 1 <small>gamepad</small></th>
+                <th scope="col">Player 2 <small>keyboard</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Move</th>
+                <td data-label="P1 keyboard"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">Left stick</kbd> <span class="or">or</span> <kbd class="pad">D-pad</kbd></td>
+                <td data-label="P2 keyboard"><kbd aria-label="Up arrow">&uarr;</kbd><kbd aria-label="Left arrow">&larr;</kbd><kbd aria-label="Down arrow">&darr;</kbd><kbd aria-label="Right arrow">&rarr;</kbd></td>
+              </tr>
+              <tr>
+                <th scope="row">Shoot / jump / block <small>hold, release at the top of the jump</small></th>
+                <td data-label="P1 keyboard"><kbd>J</kbd> <span class="or">or</span> <kbd>Space</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">A</kbd></td>
+                <td data-label="P2 keyboard"><kbd>Num 1</kbd> <span class="or">or</span> <kbd>,</kbd></td>
+              </tr>
+              <tr>
+                <th scope="row">Pass / steal</th>
+                <td data-label="P1 keyboard"><kbd>K</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">X</kbd> <span class="or">or</span> <kbd class="pad">B</kbd></td>
+                <td data-label="P2 keyboard"><kbd>Num 2</kbd> <span class="or">or</span> <kbd>.</kbd></td>
+              </tr>
+              <tr>
+                <th scope="row">Shove <small>off the ball</small></th>
+                <td data-label="P1 keyboard"><kbd>H</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">Y</kbd></td>
+                <td data-label="P2 keyboard"><kbd>M</kbd> <span class="or">or</span> <kbd>Num 0</kbd></td>
+              </tr>
+              <tr>
+                <th scope="row">Turbo</th>
+                <td data-label="P1 keyboard"><kbd>L</kbd> <span class="or">or</span> <kbd>Left Shift</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">RB</kbd> <kbd class="pad">LB</kbd> <kbd class="pad">RT</kbd></td>
+                <td data-label="P2 keyboard"><kbd>Num 3</kbd> <kbd>/</kbd> <span class="or">or</span> <kbd>Right Shift</kbd></td>
+              </tr>
+              <tr>
+                <th scope="row">Pause</th>
+                <td data-label="P1 keyboard"><kbd>Esc</kbd> <span class="or">or</span> <kbd>P</kbd></td>
+                <td data-label="P1 gamepad"><kbd class="pad">Start</kbd></td>
+                <td data-label="P2 keyboard"><span class="muted">&mdash;</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine reveal">Gamepad buttons use the standard A/B/X/Y face-button layout: A is the bottom button, Y the top.</p>
+
+        <div class="combos">
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Turbo</span> + <span>Shoot</span></p>
+            <h3>Dunk</h3>
+            <p>Inside dunk range. Two-hand, windmill, 360 or reverse depending on distance, and a flip when you&rsquo;re on fire.</p>
+          </article>
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Turbo</span> + <span>Pass</span></p>
+            <h3>Alley-oop</h3>
+            <p>Throw it up to a teammate near the rim.</p>
+          </article>
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Shove</span></p>
+            <h3>Shove</h3>
+            <p>Face a nearby opponent to push them back and jar the ball loose. Add <strong>Turbo</strong> for a knockdown if you have the stamina. Turbo + Steal also shoves on defense.</p>
+          </article>
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Hold</span> &rarr; <span>Release</span></p>
+            <h3>The shot meter</h3>
+            <p>A timing meter appears next to your shooter. Let go at the apex, in the green zone, for the best percentage.</p>
+          </article>
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Pass</span> / <span>Shoot</span></p>
+            <h3>Run your CPU teammate</h3>
+            <p>When your CPU teammate has the ball, Pass calls for it and Shoot tells them to let it fly.</p>
+          </article>
+          <article class="combo reveal">
+            <p class="combo__keys"><span>Release turbo</span></p>
+            <h3>Play D</h3>
+            <p>Let go of turbo near a ball handler to shuffle or backpedal while facing them. Hold turbo to turn and chase.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section id="rules" class="section" aria-labelledby="rules-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">The rules</p>
+          <h2 id="rules-title">Only two whistles<br> in the building.</h2>
+          <p class="lede">The classic arcade rules, re-created.</p>
+        </header>
+
+        <ol class="rules" role="list">
+          <li class="rule reveal">
+            <p class="rule__num" aria-hidden="true">01</p>
+            <h3>2-on-2, four quarters</h3>
+            <p>Quarters run 1 to 5 minutes (3 by default), with <strong>overtime</strong> if it&rsquo;s tied. A jump ball starts the game and each overtime. Quarters 2 and 3 start with the tip loser inbounding, quarter 4 with the tip winner.</p>
+          </li>
+          <li class="rule reveal">
+            <p class="rule__num" aria-hidden="true">02</p>
+            <h3>No fouls</h3>
+            <p>Shoving, elbowing and knocking people down are all legal.</p>
+          </li>
+          <li class="rule reveal">
+            <p class="rule__num" aria-hidden="true">03</p>
+            <h3>Two violations</h3>
+            <p>The <strong>24-second shot clock</strong> and <strong>goaltending</strong>. Block a shot on its way down and the basket counts.</p>
+          </li>
+          <li class="rule rule--fire reveal">
+            <p class="rule__num" aria-hidden="true">04</p>
+            <h3>Heating up &amp; on fire</h3>
+            <p>Two in a row without the other team scoring: <strong>heating up</strong> (+accuracy). Three: <strong class="fire-text">ON FIRE</strong>.</p>
+            <ul>
+              <li>Unlimited turbo, much better shooting, more dunk range, harder shoves and steals</li>
+              <li>Flame trail on the ball, and the net burns when you score</li>
+              <li>Goaltend without penalty</li>
+              <li>Goes out when the other team scores, or after 4 more baskets</li>
+            </ul>
+          </li>
+          <li class="rule reveal">
+            <p class="rule__num" aria-hidden="true">05</p>
+            <h3>Inbounds</h3>
+            <p>After a made basket the other team inbounds from under that basket. The clock stops during inbounds.</p>
+          </li>
+          <li class="rule reveal">
+            <p class="rule__num" aria-hidden="true">06</p>
+            <h3>Threes &amp; buzzer-beaters</h3>
+            <p>3-pointers count from beyond the arc or in the corners. Buzzer-beaters count.</p>
+          </li>
+        </ol>
+
+        <div class="modes reveal">
+          <h3 class="modes__title">Modes &amp; options</h3>
+          <ul class="modes__list" role="list">
+            <li><strong>1 Player vs CPU</strong> You plus a CPU teammate.</li>
+            <li><strong>2 Players co-op</strong> Both humans on the same team.</li>
+            <li><strong>2 Players head-to-head</strong> Each human gets a CPU teammate.</li>
+            <li><strong>CPU vs CPU</strong> Sit back and watch the AI play.</li>
+            <li><strong>Difficulty</strong> Rookie, Pro or Legend.</li>
+            <li><strong>Big head mode</strong> On or off. (On.)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAMS -->
+    <section id="teams" class="section section--alt" aria-labelledby="teams-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">The league</p>
+          <h2 id="teams-title">Six teams.<br> Twelve <span class="fire-text">headliners</span>.</h2>
+          <p class="lede">Every team is original, with its own badge, colors and two players. Each player has their own look and ratings out of 10 for speed, shooting, 3-pointers, dunking, passing, power, steals, blocks and clutch.</p>
+        </header>
+
+        <div class="teams">
+          <article class="team reveal" style="--team:#FFD60A;--team-2:#111111;--team-3:#00E5FF;--team-ink:#FFD60A" aria-labelledby="team-neo">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-neo.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Neon City <span class="team__abbr">NEO</span></p>
+                <h3 class="team__name" id="team-neo"><span class="visually-hidden">Neon City </span>Voltage</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#FFD60A"></span><span style="background:#111111"></span><span style="background:#00E5FF"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#3</span> Dash Mercer</p>
+                <p class="player__nick">&ldquo;Live Wire&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Dash Mercer ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#34</span> Tremont Baxley</p>
+                <p class="player__nick">&ldquo;Tank&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Tremont Baxley ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="team reveal" style="--team:#0B7A75;--team-2:#FF6B1A;--team-3:#F2F2F2;--team-ink:#FF6B1A" aria-labelledby="team-bay">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-bay.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Bay Harbor <span class="team__abbr">BAY</span></p>
+                <h3 class="team__name" id="team-bay"><span class="visually-hidden">Bay Harbor </span>Krakens</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#0B7A75"></span><span style="background:#FF6B1A"></span><span style="background:#F2F2F2"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#11</span> Rio Castellanos</p>
+                <p class="player__nick">&ldquo;Splash&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Rio Castellanos ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#50</span> Gus Halvorsen</p>
+                <p class="player__nick">&ldquo;The Anchor&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Gus Halvorsen ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:2" aria-hidden="true"></span><span class="val">2</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:10" aria-hidden="true"></span><span class="val">10</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="team reveal" style="--team:#B3122E;--team-2:#E9C46A;--team-3:#1B1B1B;--team-ink:#E9C46A" aria-labelledby="team-rrk">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-rrk.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Red Rock <span class="team__abbr">RRK</span></p>
+                <h3 class="team__name" id="team-rrk"><span class="visually-hidden">Red Rock </span>Scorpions</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#B3122E"></span><span style="background:#E9C46A"></span><span style="background:#1B1B1B"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#7</span> Marquis Delacroix</p>
+                <p class="player__nick">&ldquo;Sting&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Marquis Delacroix ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#21</span> Javier Montalvo</p>
+                <p class="player__nick">&ldquo;Desert Storm&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Javier Montalvo ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="team reveal" style="--team:#A9D6F5;--team-2:#0E2A47;--team-3:#FFFFFF;--team-ink:#A9D6F5" aria-labelledby="team-frb">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-frb.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Frostburg <span class="team__abbr">FRB</span></p>
+                <h3 class="team__name" id="team-frb"><span class="visually-hidden">Frostburg </span>Yetis</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#A9D6F5"></span><span style="background:#0E2A47"></span><span style="background:#FFFFFF"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#15</span> Nils Brekke</p>
+                <p class="player__nick">&ldquo;Avalanche&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Nils Brekke ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#4</span> Kenji Arakawa</p>
+                <p class="player__nick">&ldquo;Flurry&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Kenji Arakawa ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:10" aria-hidden="true"></span><span class="val">10</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:2" aria-hidden="true"></span><span class="val">2</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="team reveal" style="--team:#5A6270;--team-2:#FF8C1A;--team-3:#FFD166;--team-ink:#FF8C1A" aria-labelledby="team-stv">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-stv.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Steel Valley <span class="team__abbr">STV</span></p>
+                <h3 class="team__name" id="team-stv"><span class="visually-hidden">Steel Valley </span>Forge</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#5A6270"></span><span style="background:#FF8C1A"></span><span style="background:#FFD166"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#24</span> Hank Kowalski</p>
+                <p class="player__nick">&ldquo;Hammer&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Hank Kowalski ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:10" aria-hidden="true"></span><span class="val">10</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#9</span> Andre Whitfield</p>
+                <p class="player__nick">&ldquo;Spark Plug&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Andre Whitfield ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li></ul>
+              </div>
+            </div>
+          </article>
+          <article class="team reveal" style="--team:#FF4F79;--team-2:#2B2D9B;--team-3:#2EC4B6;--team-ink:#FF4F79" aria-labelledby="team-ssc">
+            <div class="team__head">
+              <img class="team__badge" src="media/team-ssc.webp" alt="" width="160" height="160" loading="lazy">
+              <div>
+                <p class="team__city">Sunset Coast <span class="team__abbr">SSC</span></p>
+                <h3 class="team__name" id="team-ssc"><span class="visually-hidden">Sunset Coast </span>Surge</h3>
+                <p class="team__colors" aria-hidden="true"><span style="background:#FF4F79"></span><span style="background:#2B2D9B"></span><span style="background:#2EC4B6"></span></p>
+              </div>
+            </div>
+            <div class="team__players">
+              <div class="player">
+                <p class="player__name"><span class="player__num">#1</span> Malik Fontaine</p>
+                <p class="player__nick">&ldquo;Riptide&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Malik Fontaine ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:7" aria-hidden="true"></span><span class="val">7</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li></ul>
+              </div>
+              <div class="player">
+                <p class="player__name"><span class="player__num">#33</span> Theo Lindqvist</p>
+                <p class="player__nick">&ldquo;Breaker&rdquo;</p>
+                <ul class="ratings" role="list" aria-label="Theo Lindqvist ratings out of 10"><li><abbr title="Speed">SPD</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li><li><abbr title="Shooting">SHT</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="3-pointers">3PT</abbr><span class="bar" style="--v:3" aria-hidden="true"></span><span class="val">3</span></li><li><abbr title="Dunk">DNK</abbr><span class="bar" style="--v:8" aria-hidden="true"></span><span class="val">8</span></li><li><abbr title="Passing">PAS</abbr><span class="bar" style="--v:6" aria-hidden="true"></span><span class="val">6</span></li><li><abbr title="Power">PWR</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Steal">STL</abbr><span class="bar" style="--v:4" aria-hidden="true"></span><span class="val">4</span></li><li><abbr title="Block">BLK</abbr><span class="bar" style="--v:9" aria-hidden="true"></span><span class="val">9</span></li><li><abbr title="Clutch">CLU</abbr><span class="bar" style="--v:5" aria-hidden="true"></span><span class="val">5</span></li></ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 id="gallery-title">Courtside seats.</h2>
+          <p class="lede">Clips and screenshots from the Unreal desktop build and the browser version. Tap any shot to blow it up.</p>
+        </header>
+
+        <div class="gallery" data-web-shots="3">
+          <figure class="shot shot--video shot--wide reveal">
+            <div class="shot__frame">
+              <video class="inline-video" muted playsinline loop preload="none" poster="media/movement-poster.jpg" width="1280" height="720" aria-describedby="cap-movement">
+                <source src="media/movement.mp4" type="video/mp4">
+              </video>
+              <button class="shot__expand" type="button" data-lightbox-video="media/movement.mp4" data-poster="media/movement-poster.jpg" aria-label="Expand video: turbo, defensive shuffles and backpedals">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg>
+              </button>
+            </div>
+            <figcaption id="cap-movement"><strong>Movement.</strong> Tip-off intro, turbo drives, defensive shuffles and backpedals in a CPU-vs-CPU game.</figcaption>
+          </figure>
+
+          <figure class="shot shot--video reveal">
+            <div class="shot__frame">
+              <video class="inline-video" muted playsinline loop preload="none" poster="media/tip-and-shove-poster.jpg" width="1280" height="720" aria-describedby="cap-tip">
+                <source src="media/tip-and-shove.mp4" type="video/mp4">
+              </video>
+              <button class="shot__expand" type="button" data-lightbox-video="media/tip-and-shove.mp4" data-poster="media/tip-and-shove-poster.jpg" aria-label="Expand video: referee toss, tip and first shove">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg>
+              </button>
+            </div>
+            <figcaption id="cap-tip"><strong>Tip and shove.</strong> The referee&rsquo;s toss, the tip, and the first shove of the game.</figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <a class="shot__frame" href="media/menu.jpg" data-lightbox>
+              <picture><source srcset="media/menu.webp" type="image/webp"><img src="media/menu.jpg" alt="Main menu: the HEAT CHECK logo over the arena with Start Game, mode, quarter length, difficulty and big head mode options." width="1600" height="900" loading="lazy"></picture>
+            </a>
+            <figcaption><strong>Main menu.</strong> Mode, quarter length, difficulty and big head mode.</figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <a class="shot__frame" href="media/team-select.jpg" data-lightbox>
+              <picture><source srcset="media/team-select.webp" type="image/webp"><img src="media/team-select.jpg" alt="Team select: Bay Harbor Krakens versus Neon City Voltage, with each player's name, nickname and rating bars." width="1600" height="900" loading="lazy"></picture>
+            </a>
+            <figcaption><strong>Team select.</strong> Both rosters, nicknames and ratings.</figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <a class="shot__frame" href="media/intro.jpg" data-lightbox>
+              <picture><source srcset="media/intro.webp" type="image/webp"><img src="media/intro.jpg" alt="Tip-off intro: 'Tonight at the Heat Check Arena', Neon City Voltage versus Bay Harbor Krakens with both team badges at center court." width="1600" height="900" loading="lazy"></picture>
+            </a>
+            <figcaption><strong>Tip-off intro.</strong> Tonight at the Heat Check Arena.</figcaption>
+          </figure>
+
+
+
+
+          <!-- Browser-version screenshots: add media/web-1.jpg .. web-3.jpg (1600x900), then set data-web-shots on .gallery above to how many exist (0-3). -->
+          <figure class="shot shot--web reveal" data-optional hidden>
+            <a class="shot__frame" href="media/web-1.jpg" data-lightbox>
+              <img data-src="media/web-1.jpg" alt="The browser version of HEAT CHECK: a player hangs on the rim after a dunk while MONSTER SLAM! flashes on screen." width="1600" height="900">
+            </a>
+            <figcaption><strong>In your browser.</strong> A monster slam in the Three.js web port.</figcaption>
+          </figure>
+          <figure class="shot shot--web reveal" data-optional hidden>
+            <a class="shot__frame" href="media/web-2.jpg" data-lightbox>
+              <img data-src="media/web-2.jpg" alt="The browser version of HEAT CHECK: the referee holds the ball between both jumpers at center court before the tip." width="1600" height="900">
+            </a>
+            <figcaption><strong>In your browser.</strong> The referee's toss at center court.</figcaption>
+          </figure>
+          <figure class="shot shot--web reveal" data-optional hidden>
+            <a class="shot__frame" href="media/web-3.jpg" data-lightbox>
+              <img data-src="media/web-3.jpg" alt="The browser version of HEAT CHECK: the team select screen with Neon City Voltage versus Sunset Coast Surge." width="1600" height="900">
+            </a>
+            <figcaption><strong>In your browser.</strong> Choose your teams.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILT FROM CODE -->
+    <section id="built" class="section section--alt" aria-labelledby="built-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Built from code</p>
+          <h2 id="built-title">Zero hand&#8209;made assets.<br> <span class="fire-text">Everything</span> is a script.</h2>
+          <p class="lede">There are no hand-made assets in HEAT CHECK. Python scripts in Blender build every model, rig, animation, texture and logo. Another script synthesizes every sound effect, crowd bed, announcer line and music loop. The desktop game is C++ on Unreal Engine 5.9, with no Blueprints.</p>
+        </header>
+
+        <ol class="pipeline reveal" role="list" aria-label="Asset pipeline">
+          <li class="pipe">
+            <p class="pipe__step">Step 1</p>
+            <h3>Blender Python</h3>
+            <p>Players, a 25-bone rig, 22 animation clips, the court, hoops, ball, arena, crowd, logos and badges.</p>
+            <code>Blender/gen_*.py</code>
+          </li>
+          <li class="pipe">
+            <p class="pipe__step">Step 2</p>
+            <h3>Export</h3>
+            <p>FBX meshes and animations, PNG textures, synthesized WAV audio and JSON material manifests.</p>
+            <code>Art/Export/</code>
+          </li>
+          <li class="pipe pipe--split">
+            <div class="pipe__branch">
+              <p class="pipe__step">Desktop</p>
+              <h3>Unreal Engine 5.9 C++</h3>
+              <p>Import scripts build the materials and map. Gameplay, AI, ball physics, cameras, HUD and audio are all C++.</p>
+              <code>Source/HeatCheck/</code>
+            </div>
+            <div class="pipe__branch pipe__branch--web">
+              <p class="pipe__step">Browser</p>
+              <h3>Three.js web port</h3>
+              <p>The same Blender-generated models, animations and synthesized audio, running in your browser.</p>
+              <code>web/play/</code>
+            </div>
+          </li>
+        </ol>
+
+        <dl class="stats reveal" aria-label="By the numbers">
+          <div class="stat"><dt>Seats in the arena</dt><dd data-count="6354">6,354</dd></div>
+          <div class="stat"><dt>Animated fans</dt><dd data-count="5754">5,754</dd></div>
+          <div class="stat"><dt>Sound effects</dt><dd data-count="82">82</dd></div>
+          <div class="stat"><dt>Player animation clips</dt><dd data-count="22">22</dd></div>
+          <div class="stat"><dt>Bones per player</dt><dd data-count="25">25</dd></div>
+          <div class="stat"><dt>Blueprints</dt><dd data-count="0">0</dd></div>
+        </dl>
+
+        <div class="built-figs">
+          <figure class="built-fig built-fig--wide reveal">
+            <a class="shot__frame" href="media/arena-blender.jpg" data-lightbox>
+              <picture><source srcset="media/arena-blender.webp" type="image/webp"><img src="media/arena-blender.jpg" alt="The procedurally generated arena rendered in Blender: hardwood court, LED ribbon boards and thousands of fans in the stands." width="1600" height="900" loading="lazy"></picture>
+            </a>
+            <figcaption><code>gen_arena.py</code> builds the bowl, 6,354 seats, 5,754 animated fans, LED ribbons, benches, scorer&rsquo;s table, jumbotron and light rig.</figcaption>
+          </figure>
+          <figure class="built-fig reveal">
+            <a class="shot__frame shot__frame--light" href="media/character-blender.jpg" data-lightbox>
+              <picture><source srcset="media/character-blender.webp" type="image/webp"><img src="media/character-blender.jpg" alt="A generated player in Blender: yellow Voltage jersey number 23, headband and wristbands, in a T-pose." width="1400" height="1000" loading="lazy"></picture>
+            </a>
+            <figcaption><code>gen_character.py</code> makes one skinned athlete, then swaps in 7 hair styles, beards, headbands, numbers and team wordmarks.</figcaption>
+          </figure>
+        </div>
+
+        <div class="rebuild reveal">
+          <div class="rebuild__copy">
+            <h3>Rebuild it yourself</h3>
+            <p>The desktop game builds on macOS with Xcode, Blender 5.3 and an Unreal Engine 5.9 source build. Four scripts regenerate everything from scratch.</p>
+            <p><a class="link-arrow" href="https://github.com/nearbycoder/heatcheck#readme">Read the full build guide</a></p>
+          </div>
+<pre><code><span class="c"># art + audio from Python</span>
+Tools/build_art.sh
+<span class="c"># import into Unreal, build materials + map</span>
+Tools/import_assets.sh
+<span class="c"># compile the C++ and play</span>
+Tools/build.sh
+Tools/play.sh</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap final__inner reveal">
+        <p class="eyebrow">Tip-off in 3, 2, 1&hellip;</p>
+        <h2 id="final-title">Is it <span class="fire-text">on fire</span>?</h2>
+        <p class="lede">It runs in your browser. No download, no account. Bring a keyboard or a gamepad and a friend.</p>
+        <div class="cta-row cta-row--center">
+          <a class="btn-play" href="play/">
+            <svg class="btn-play__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <span>Play in your browser</span>
+          </a>
+          <a class="btn-ghost" href="https://github.com/nearbycoder/heatcheck">View on GitHub</a>
+        </div>
+        <p class="touch-note touch-note--center" role="note"><span>Needs a keyboard or gamepad. Touch controls may come later.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot">
+      <div class="foot__brand">
+        <img src="media/logo-sm.webp" alt="HEAT CHECK" width="240" height="120" loading="lazy">
+        <p>An original 2-on-2 arcade basketball game in the 90s-arcade style. All names, teams, logos, art and audio are original and generated from code.</p>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <ul>
+          <li><a href="play/">Play in your browser</a></li>
+          <li><a href="https://github.com/nearbycoder/heatcheck">Source on GitHub</a></li>
+          <li><a href="https://github.com/nearbycoder/heatcheck#readme">Desktop build (Unreal Engine 5.9)</a></li>
+          <li><a href="https://github.com/nearbycoder/heatcheck/issues">Report a bug</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="wrap foot__fine">The browser version is a web port of the Unreal desktop game. Made with Blender, Unreal Engine and Three.js.</p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+    <form method="dialog" class="lightbox__close-form">
+      <button class="lightbox__close" type="submit" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4 17.6 5 12 10.6z"/></svg>
+      </button>
+    </form>
+    <div class="lightbox__stage"></div>
+    <p class="lightbox__caption"></p>
+  </dialog>
+</body>
+</html>

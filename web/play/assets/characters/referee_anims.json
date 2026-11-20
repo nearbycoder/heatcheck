@@ -1,0 +1,18 @@
+{
+  "RefToss": {
+    "frames": 45,
+    "fps": 30,
+    "loop": false,
+    "events": {
+      "release_frame": 27
+    },
+    "source": "Art/Export/Official/A_RefToss.fbx (Blender/gen_referee.py)"
+  },
+  "Idle": {
+    "frames": 60,
+    "fps": 30,
+    "loop": true,
+    "events": {},
+    "source": "player Idle clip (same skeleton)"
+  }
+}

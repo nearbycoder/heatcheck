@@ -1,0 +1,138 @@
+{
+  "note": "Hoop-local Blender meters: origin = floor point under the rim centre, court toward +X. Unreal cm = (100x, -100y, 100z). Place one hoop actor at x=-1272.5 cm yaw 0 and one at x=+1272.5 cm yaw 180; attach the parts below at their relative offsets.",
+  "parts": {
+    "SM_HoopStanchion": {
+      "pivot": "hoop origin",
+      "offset_m": [
+        0,
+        0,
+        0
+      ],
+      "ue_offset_cm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "SM_Backboard": {
+      "pivot": "hoop origin",
+      "offset_m": [
+        0,
+        0,
+        0
+      ],
+      "ue_offset_cm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "SM_BackboardFrame": {
+      "pivot": "hoop origin",
+      "offset_m": [
+        0,
+        0,
+        0
+      ],
+      "ue_offset_cm": [
+        0,
+        0,
+        0
+      ]
+    },
+    "SM_Rim": {
+      "pivot": "rim mount point on the glass",
+      "offset_m": [
+        -0.38,
+        0.0,
+        3.05
+      ],
+      "ue_offset_cm": [
+        -38.0,
+        0.0,
+        305.0
+      ]
+    },
+    "SM_Net": {
+      "pivot": "rim centre",
+      "offset_m": [
+        0.0,
+        0.0,
+        3.05
+      ],
+      "ue_offset_cm": [
+        0.0,
+        0.0,
+        305.0
+      ]
+    }
+  },
+  "dimensions_m": {
+    "rim_center": [
+      0.0,
+      0.0,
+      3.05
+    ],
+    "rim_inner_radius": 0.2286,
+    "rim_tube_radius": 0.01,
+    "glass": {
+      "x": [
+        -0.41,
+        -0.38
+      ],
+      "y": [
+        -0.915,
+        0.915
+      ],
+      "z": [
+        2.9,
+        3.97
+      ]
+    },
+    "inner_rectangle": {
+      "width": 0.59,
+      "height": 0.45,
+      "bottom_z": 3.05,
+      "plane_x": -0.376
+    },
+    "net": {
+      "top_radius": 0.235,
+      "bottom_radius": 0.14,
+      "length": 0.42,
+      "diamonds_around": 12
+    },
+    "stanchion_base": {
+      "x": [
+        -3.9,
+        -2.3
+      ],
+      "y": [
+        -0.66,
+        0.66
+      ],
+      "z": [
+        0.0,
+        0.975
+      ]
+    },
+    "shot_clock": {
+      "x": [
+        -0.52,
+        -0.3
+      ],
+      "y": [
+        -0.33,
+        0.33
+      ],
+      "z": [
+        4.02,
+        4.3
+      ]
+    }
+  },
+  "animatable": {
+    "MI_BackboardLED": "emissive strip around the board edge; pulse emissive_strength for 'heat check' moments",
+    "SM_Rim": "rotate about its pivot (the mount) for dunk rim-bend",
+    "SM_Net": "scale/offset about its pivot (rim centre) for the swish"
+  }
+}
